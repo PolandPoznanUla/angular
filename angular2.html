@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Opis strony do 160 znakow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js">
+    
+    </script>
+    <style>
+    
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl"> 
+  <input type="checkbox" ng-model="myBool" />Pokaż listę
+  <ul ng-show="myBool">
+      <li ng-repeat='element in listElements'>
+          {{element}}
+      </li>
+  </ul>
+  
+  <button ng-disabled="!myBool">click me!</button>
+  
+   <script>
+        var app =angular.module('myApp', []);
+       
+       app.controller('myCtrl', function($scope) {
+           
+           $scope.myBool = true;
+           $scope.listElements = [
+               "lorem1",
+               "lorem2",
+               "lorem3",
+               "lorem4",
+               "lorem5"
+           ]
+           
+       });
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Opis strony do 160 znakow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js">
+    </script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            transition: .5s;
+        }
+        
+        .red {
+            background: red;
+        }
+        
+        .blue {
+            background: blue;
+        }
+        
+        .green {
+            background: green;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+   
+   <select ng-model="myClass">
+       <option value="red">RED</option>
+       <option value="blue">BLUE</option>
+       <option value="green">GREEN</option>
+   </select>
+    <div ng-class="myClass"> </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.myClass = "temp-class";
+        });
+    </script>
+</body>
+
+</html>
