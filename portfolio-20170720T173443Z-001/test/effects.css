@@ -1,0 +1,66 @@
+.column {
+    display: inline-block;
+    width: 30%;
+}
+
+div>div {
+    width: 100px;
+    height: 100px;
+    background-color: darkturquoise;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+div.active {
+    opacity: 1;
+}
+
+.circle:hover {
+    border-radius: 50%;
+}
+
+.top {
+    position: relative;
+    top: 0px;
+}
+
+.top:hover {
+    top: 50px;
+}
+
+.scale:hover {
+    transform: scale(1.5);
+}
+
+.scale-down:hover {
+    transform: scale(0.5);
+}
+
+.translate:hover {
+    transform: translate(150px, 200px);
+}
+
+.rotate:hover {
+    transform: rotate(250deg);
+}
+
+.green-dot:hover {
+    transform: rotate(180deg) scale(0.3);
+    background-color: yellowgreen;
+    border-radius: 50%;
+}
+
+.skew:hover {
+    transform: skewX(-30deg);
+}
+
+.opacity:hover {
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        display: 100%;
+    }
+}
+

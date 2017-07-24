@@ -1,0 +1,22 @@
+             body {
+                 background: rgb(210, 250, 200);
+             }
+             
+             a {
+                 color: #ff7711;
+                 background: black;
+             }
+             
+             .small {
+                 font-size: 12px;
+             }
+             
+             #page-title {
+                 font-size: 80px;
+                 font-family: helvetica;
+             }
+             
+             img {
+                 width: 200px;
+                 height: 200px;
+             }

@@ -1,0 +1,145 @@
+.header {
+    text-align: center;
+    color: white;
+    padding: 50px 0
+}
+
+.header img {
+    padding: 10px 25px;
+    border: 5px solid #220000;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+body {
+    background: url(img/background.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Rock Salt', cursive;
+}
+
+p {
+    font-family: 'Cutive Mono', monospace;
+}
+
+.header h1 {
+    margin: 10px 0;
+    font-size: 65px;
+}
+
+.wrapper {
+    width: 600px;
+    max-height: 95%;
+    margin: auto;
+}
+
+.main,
+.footer {
+    background: rgba(255,255,255,0.5);
+    padding: 30px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li{
+    display: inline-block;
+    padding-right: 55px;
+    
+}
+
+.navigation li.last-of-type {
+    padding: 0;
+}
+
+.main p:first-of-type {
+    color: darkred;
+}
+
+.main p:nth-of-type(2) {
+    color: seagreen;
+}
+
+.main p:nth-of-type(2n+1) {
+    background-color: lightyellow;
+}
+
+.main :last-of-type {
+    color: midnightblue;
+}
+
+.navigation a {
+    text-decoration: none;
+    position: relative;
+}
+
+.navigation a:hover {
+    color: rgb(200,150,120);
+}
+.navigation a:activer {
+    color: blue;
+}
+
+.navigation a:visited {
+    color: red;
+}
+
+.navigation a:before {
+    content: "";
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: darkred;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -4px;
+    transition: 0.5s;
+}
+
+.navigation a:hover:before {
+    opacity: 1;
+    top: -8px;
+    background-color: orangered;
+}
+
+.hamburger span, .hamburger:before, .hamburger:after {
+    width: 40px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: black;
+    position: relative;
+    display: block;
+    }
+
+.hamburger:before {
+    content: "";
+    top: -5px;
+}
+
+.hamburger span {
+    top: 5px;
+}
+
+.hamburger:after {
+    content: "";
+    top: 15px;
+}
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+    .navigation ul {
+        display: none;
+    }
+}

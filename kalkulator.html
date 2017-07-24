@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>MKalkulator JS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Opis strony do 160 znakow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   
+    </head>
+
+<body> 
+   <input id="value1" />
+<!--    <input id="value" type='number'/>-->
+   <select id="action">
+       <option value="addition">plus</option>
+       <option value="subtraction">minus</option>
+       <option value="multiplicaion">razy</option>
+       <option value="division">minus</option>
+    </select>
+    <input id="value2" />
+    <button id="result">Oblicz</button>
+    
+    <script>
+        var value1 = document.getElementById('value1');
+        var value2 = document.getElementById('value2');
+        var action = document.getElementById('action');
+        
+        document.getElementById('result').addEventListener('click', function(){
+//            value1.parseInt(value1.nodeValue)
+            
+            if(action.value == 'addition') {
+                alert(parseInt(value1.value) + parseInt(value2.value));
+            } else if(action.value == 'subtraction') {
+                alert(parseInt(value1.value) - parseInt(value2.value));
+            }
+        });
+    </script>
+</body>
+
+</html>

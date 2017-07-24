@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>ANGULAR</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Opis strony do 160 znakow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js">
+    
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl"> 
+  
+<!--  <input ng-model="myName" />-->
+  <h1>{{myName}}</h1>
+  <button ng-click="myFunction('Mikolaj')">Cześć Mikołaj</button>
+  <button ng-click="myFunction('Roman')">Cześć Roman</button>
+<!--  <h1 style="background: {{myName}}">Moj kolor to: {{myName}}</h1>-->
+   <script>
+        var app =angular.module('myApp', []);
+       
+       app.controller('myCtrl', function($scope) {
+           $scope.myName = "Ula";
+           
+           $scope.myFunction = function(name) {
+               alert("Hello " + name);
+           };
+       });
+       
+    </script>
+</body>
+
+</html>
